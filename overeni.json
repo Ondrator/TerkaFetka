@@ -42,5 +42,26 @@
     }
   ],
   "errors": [],
-  "interactions": "passed: desktop anchors and active navigation, mobile navigation and Escape, accordion, required/email validation, camp inquiry, draft, download, privacy, old-link redirect"
+  "interactions": "passed: one-page navigation, mobile menu and Escape, FAQ, privacy; Formspree integration tested with intercepted responses, no actual submission",
+  "formspree": {
+    "endpoint": "https://formspree.io/f/mvkkzjkn",
+    "tested": [
+      "required fields",
+      "email validation",
+      "pending state",
+      "successful response and reset",
+      "422 validation failure",
+      "429 service limit",
+      "network failure",
+      "input preserved on failure",
+      "mobile layout"
+    ],
+    "realSubmissionSent": false,
+    "requestsMocked": 4,
+    "pageErrors": []
+  },
+  "githubPages": {
+    "initialBuildTriggeredViaAPI": true,
+    "verifiedHTTP": 200
+  }
 }

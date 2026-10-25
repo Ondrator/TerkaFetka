@@ -27,24 +27,23 @@ matchMedia("(min-width:1024px)").addEventListener("change", () => closeMenu());
 const form = document.getElementById("contact-form");
 if (form) {
   const feedback = form.querySelector("#form-feedback");
-  let draftURL;
-  if (new URLSearchParams(location.search).get("tema") === "tabor")
-    form.elements.message.value =
-      "Dobrý den, máme zájem o letní tábor 2027. Prosím o bližší informace k přihlášení. Děkujeme.";
+  const submitButton = form.querySelector('button[type="submit"]');
+  const fields = [...form.querySelectorAll("input,textarea")];
+  let sending = false;
   form.addEventListener("input", () => {
-    feedback.hidden = true;
-    form
-      .querySelectorAll("input,textarea")
-      .forEach((f) => f.setCustomValidity(""));
-    if (draftURL) {
-      URL.revokeObjectURL(draftURL);
-      draftURL = undefined;
-    }
+    if (!sending) feedback.hidden = true;
+    fields.forEach((field) => field.setCustomValidity(""));
   });
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+  function showFeedback(text, error = false) {
+    feedback.textContent = text;
+    feedback.hidden = false;
+    feedback.setAttribute("role", error ? "alert" : "status");
+    feedback.dataset.state = error ? "error" : "success";
+  }
+  form.addEventListener("submit", async (event) => {
+    event.preventDefault();
+    if (sending) return;
     const name = form.elements.name,
-      email = form.elements.email,
       phone = form.elements.phone,
       message = form.elements.message;
     name.setCustomValidity(
@@ -61,51 +60,53 @@ if (form) {
         : "",
     );
     if (!form.reportValidity()) return;
-    const subject = "Dotaz z webu Hlavonožec",
-      body = `Dobrý den,\n\n${message.value.trim()}\n\n${name.value.trim()}\nE-mail: ${email.value.trim()}${phone.value.trim() ? "\nTelefon: " + phone.value.trim() : ""}`;
-    feedback.replaceChildren();
-    const title = document.createElement("strong");
-    title.textContent = "E-mail je připravený. Zpráva zatím nebyla odeslána.";
-    const intro = document.createElement("p");
-    intro.textContent =
-      "Otevřete zprávu ve svém e-mailovém programu a odešlete ji. Pokud se program neotevře, stáhněte e-mail nebo zkopírujte text a pošlete ho na spolekhlavonozec@gmail.com.";
-    const preview = document.createElement("pre");
-    preview.textContent = body;
-    const actions = document.createElement("div");
-    actions.className = "hero-actions";
-    const open = document.createElement("a");
-    open.className = "button";
-    open.textContent = "Otevřít e-mailový program ↗";
-    open.href = `mailto:spolekhlavonozec@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    const download = document.createElement("a");
-    download.className = "button secondary";
-    download.textContent = "Stáhnout e-mail (.eml)";
-    download.download = "dotaz-hlavonozec.eml";
-    const bytes = new TextEncoder().encode(body.replace(/\n/g, "\r\n"));
-    let binary = "";
-    bytes.forEach((b) => (binary += String.fromCharCode(b)));
-    const encoded = btoa(binary)
-      .match(/.{1,76}/g)
-      .join("\r\n");
-    if (draftURL) URL.revokeObjectURL(draftURL);
-    draftURL = URL.createObjectURL(
-      new Blob(
-        [
-          `To: spolekhlavonozec@gmail.com\r\nSubject: Dotaz z webu Hlavonozec\r\nX-Unsent: 1\r\nMIME-Version: 1.0\r\nContent-Type: text/plain; charset=UTF-8\r\nContent-Transfer-Encoding: base64\r\n\r\n${encoded}\r\n`,
-        ],
-        { type: "message/rfc822" },
-      ),
-    );
-    download.href = draftURL;
-    actions.append(open, download);
-    feedback.append(title, intro, preview, actions);
-    feedback.hidden = false;
-    feedback.scrollIntoView({
-      behavior: matchMedia("(prefers-reduced-motion: reduce)").matches
-        ? "auto"
-        : "smooth",
-      block: "nearest",
-    });
+    const data = new FormData(form);
+    for (const field of fields)
+      if (field.name) data.set(field.name, field.value.trim());
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 20000);
+    sending = true;
+    submitButton.disabled = true;
+    submitButton.textContent = "Odesílám…";
+    form.setAttribute("aria-busy", "true");
+    fields.forEach((field) => (field.disabled = true));
+    feedback.hidden = true;
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data,
+        headers: { Accept: "application/json" },
+        credentials: "omit",
+        signal: controller.signal,
+      });
+      if (response.ok) {
+        form.reset();
+        showFeedback(
+          "Děkujeme! Vaše zpráva byla úspěšně odeslána. Ozveme se vám na uvedený e-mail.",
+        );
+      } else {
+        showFeedback(
+          response.status === 422
+            ? "Zprávu se nepodařilo odeslat. Zkontrolujte vyplněné údaje a zkuste to znovu. Případně napište na spolekhlavonozec@gmail.com."
+            : "Služba zprávu nepřijala. Text zůstal vyplněný. Zkuste to později nebo napište na spolekhlavonozec@gmail.com.",
+          true,
+        );
+      }
+    } catch (error) {
+      showFeedback(
+        error.name === "AbortError"
+          ? "Potvrzení odeslání nepřišlo včas. Text zůstal vyplněný. Pokud se vám neozveme, kontaktujte nás na spolekhlavonozec@gmail.com."
+          : "Odeslání se nepodařilo potvrdit. Zkontrolujte připojení. Text zůstal vyplněný; můžete jej poslat na spolekhlavonozec@gmail.com.",
+        true,
+      );
+    } finally {
+      clearTimeout(timeout);
+      sending = false;
+      fields.forEach((field) => (field.disabled = false));
+      submitButton.disabled = false;
+      submitButton.textContent = "Odeslat zprávu →";
+      form.removeAttribute("aria-busy");
+    }
   });
 }
 // Keep the navigation in sync with the visible section, including manual scroll.

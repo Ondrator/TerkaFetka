@@ -107,15 +107,20 @@
               >
             </div>
             <form
-              action="mailto:spolekhlavonozec@gmail.com"
+              action="https://formspree.io/f/mvkkzjkn"
               class="flex flex-col gap-space-md"
-              enctype="text/plain"
               id="contact-form"
               method="post"
             >
+              <input
+                name="_subject"
+                type="hidden"
+                value="Dotaz z webu Hlavonožec"
+              />
               <p class="form-note">
-                Formulář připraví zprávu ve vašem e-mailovém programu. Odeslání
-                potvrdíte až v něm. Údaje se na tomto webu neukládají.
+                Zprávu odešlete přímo z webu prostřednictvím služby Formspree.
+                Údaje použijeme k vyřízení vašeho dotazu.
+                <a class="text-link" href="#soukromi">Více o soukromí</a>
               </p>
               <div class="flex flex-col gap-space-xs">
                 <label
@@ -196,7 +201,7 @@
                   style="background-color: #ce2776"
                   type="submit"
                 >
-                  Připravit e-mail →
+                  Odeslat zprávu →
                 </button>
               </div>
               <div
