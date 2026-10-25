@@ -1,0 +1,1 @@
+Původní loga a designové tokeny dodané klientem. HTML sekce v src/pages vycházejí z pěti Google Stitch exportů. Ilustrační fotografie není ověřenou fotografií základny. Kvalifikace vedoucích uvedené jako ukázkové štítky nebyly přebírány; ověřené údaje o vedení spolku z úvodní stránky byly zachovány.

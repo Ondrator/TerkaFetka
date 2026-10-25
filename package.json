@@ -1,0 +1,13 @@
+{
+  "name": "hlavonozec-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Statický web ze Stitch exportů pro Hlavonožec, z. s.",
+  "scripts": {
+    "start": "node serve.mjs",
+    "build": "tailwindcss -i src/input.css -c tailwind.config.cjs -o assets/design.css --minify && node build.mjs"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}

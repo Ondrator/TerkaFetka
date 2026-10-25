@@ -1,0 +1,602 @@
+<main class="site-main" id="main" tabindex="-1">
+  <div class="flex flex-col w-full bg-surface-container-lowest text-on-surface">
+    <section
+      class="relative w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin pt-space-xl pb-space-2xl"
+    >
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl items-center">
+        <div class="lg:col-span-7 flex flex-col items-start gap-space-md">
+          <div
+            class="inline-flex items-center gap-2 px-space-md py-1.5 rounded-full bg-[#eef6ff] text-[#0061a6] shadow-sm border border-[#64aeff]/30"
+            style="
+              background-color: rgb(255, 255, 255);
+              border-color: rgb(34, 139, 191);
+              color: #167ba9;
+            "
+          >
+            <span
+              class="w-2.5 h-2.5 rounded-full bg-[#46a3ff] animate-pulse"
+              style="background-color: #167ba9"
+            ></span
+            ><span class="font-label-md text-label-md font-bold tracking-wide"
+              >Horní Bečva • Chalupa pod Bukovinami</span
+            >
+          </div>
+          <h1
+            class="font-display-hero text-display-hero tracking-tight text-on-surface"
+          >
+            Letní tábor 2027<br class="hidden sm:inline" />
+          </h1>
+          <p
+            class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl"
+          >
+            Po letech zkušeností jako účastníci i jako vedoucí jsme se rozhodli
+            vytvořit tábor takový, jaký bychom si sami přáli. Záleží nám hlavně
+            na individuálním přístupu ke každému dítěti. Chceme poskytnout
+            prostor pro utvoření kamarádství, protože ta si z táborů odnášíme
+            především.
+          </p>
+          <div class="camp-stats">
+            <div
+              class="flex flex-col p-space-sm bg-surface-container-low rounded-DEFAULT border-l-4 border-[#46a3ff]"
+              style="
+                background-color: rgb(255, 255, 255);
+                border-left-color: rgb(34, 139, 191);
+              "
+            >
+              <span
+                class="font-headline-sm text-headline-sm text-[#0061a6] font-extrabold"
+                style="color: #167ba9"
+                >7 dní</span
+              ><span
+                class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider"
+                >Délka tábora</span
+              >
+            </div>
+            <div
+              class="flex flex-col p-space-sm bg-surface-container-low rounded-DEFAULT border-l-4 border-[#ffd54e]"
+              style="
+                background-color: rgb(255, 255, 255);
+                border-left-color: rgb(240, 194, 67);
+              "
+            >
+              <span
+                class="font-headline-sm text-headline-sm text-[#735c00] font-extrabold"
+                style="color: #896708"
+                >5x denně</span
+              ><span
+                class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider"
+                >Čerstvá strava</span
+              >
+            </div>
+            <div
+              class="flex flex-col p-space-sm bg-surface-container-low rounded-DEFAULT border-l-4 border-[#46a3ff]"
+              style="
+                background-color: rgb(255, 255, 255);
+                border-left-color: rgb(227, 57, 136);
+              "
+            >
+              <span
+                class="font-headline-sm text-headline-sm text-[#0061a6] font-extrabold"
+                style="color: #bf1e68"
+                >24/7</span
+              ><span
+                class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider"
+                >Zdravotní dohled</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="lg:col-span-5 relative w-full">
+          <div
+            class="relative overflow-hidden rounded-lg shadow-xl bg-surface-container-low group"
+          >
+            <img
+              alt="Barevný maskot spolku Hlavonožec"
+              class="w-full h-[420px] object-cover transition-transform duration-700 group-hover:scale-105 camp-mascot"
+              decoding="async"
+              fetchpriority="high"
+              height="617"
+              loading="eager"
+              src="assets/logo-color.webp"
+              width="425"
+            />
+
+            <span class="image-caption">Fotografii základny připravujeme</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-full bg-surface-container-low py-space-2xl" id="turnusy">
+      <div
+        class="max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin flex flex-col gap-space-xl"
+      >
+        <div class="camp-list" id="camp-cards-container">
+          <div
+            class="lg:col-span-8 camp-card flex flex-col md:flex-row bg-surface-container-lowest rounded-lg shadow-md overflow-hidden transition-all duration-300 hover:shadow-xl border border-surface-container featured-camp"
+          >
+            <div class="relative md:w-5/12 min-h-[260px] overflow-hidden">
+              <img
+                alt="Barevný maskot spolku Hlavonožec"
+                class="w-full h-full object-cover transition-transform duration-500 camp-mascot"
+                decoding="async"
+                height="617"
+                loading="lazy"
+                src="assets/logo-color.webp"
+                width="425"
+              />
+            </div>
+            <div
+              class="p-space-lg md:w-7/12 flex flex-col justify-between gap-space-md"
+            >
+              <div>
+                <div
+                  class="flex flex-wrap items-center justify-between gap-2 text-on-surface-variant font-label-sm text-label-sm mb-2"
+                >
+                  <span
+                    class="flex items-center gap-1 font-semibold text-[#0061a6] bg-[#e5eeff] px-2.5 py-0.5 rounded-full"
+                    style="
+                      background-color: rgb(255, 255, 255);
+                      color: #167ba9;
+                      border: 1px solid rgb(34, 139, 191);
+                    "
+                    ><span
+                      aria-hidden="true"
+                      class="material-symbols-outlined text-[18px]"
+                      >calendar_month</span
+                    >12. 7. – 18. 7. 2027 (7 dní)</span
+                  ><span
+                    class="bg-[#ffe087]/50 text-[#574500] px-2.5 py-0.5 rounded-full font-bold"
+                    style="
+                      background-color: rgb(255, 255, 255);
+                      color: #896708;
+                      border: 1px solid rgb(240, 194, 67);
+                    "
+                    >Věk 6–15 let</span
+                  >
+                </div>
+                <h3
+                  class="font-headline-sm text-headline-sm text-on-surface font-bold"
+                >
+                  Letní tábor 2027 - připravujeme
+                </h3>
+                <p class="camp-summary">
+                  Týden her, dílen a nových přátelství pro děti od 6 do 15 let.
+                  Zázemí v chalupě pronajaté pouze pro náš tábor.
+                </p>
+              </div>
+              <div
+                class="pt-space-md border-t border-surface-container flex flex-wrap items-center justify-between gap-space-sm"
+              >
+                <div>
+                  <span
+                    class="font-label-sm text-label-sm text-on-surface-variant block"
+                    >Cena za 7 dní (vše v ceně)</span
+                  ><span
+                    class="font-headline-sm text-headline-sm text-on-surface font-extrabold"
+                    >Bude upřesněno</span
+                  >
+                </div>
+                <a
+                  class="px-space-xl py-3 rounded-full bg-[#46a3ff] text-white font-label-md text-label-md font-bold shadow-md hover:bg-[#0061a6] transition-all duration-200 inline-flex items-center gap-2 hover:-translate-y-0.5"
+                  href="prihlaska.html"
+                  style="background-color: #167ba9; color: rgb(255, 255, 255)"
+                  >Mám zájem o tábor</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="w-full max-w-7xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin py-space-2xl"
+      id="zivot-na-tabore"
+    >
+      <div class="text-center max-w-3xl mx-auto mb-space-2xl">
+        <h2 class="font-headline-lg text-headline-lg text-on-surface mt-2">
+          Tábor s rodinnou atmosférou
+        </h2>
+        <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+          Spousta z nás se zná z tábora, ze kterého máme nespočet krásných
+          vzpomínek. Při vedoucování na komerčních táborech jsme ale začali
+          poznávat, že ne všude se tábory tvoří s dobrými úmysly. Terka se
+          Zuzkou se po těchto zkušenostech rozhodly, že není jiná možnost než
+          začít tvořit tábor od základů po svém.
+        </p>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+        <div
+          class="lg:col-span-12 grid grid-cols-1 md:grid-cols-2 gap-space-lg"
+        ></div>
+      </div>
+      <div
+        class="mt-space-xl p-space-xl rounded-lg bg-surface-container-lowest shadow-md"
+      >
+        <h3
+          class="font-headline-sm text-headline-sm text-on-surface text-center mb-space-lg"
+        >
+          Co všechno cena tábora zahrnuje?
+        </h3>
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md"
+        >
+          <div class="flex items-start gap-3">
+            <span
+              aria-hidden="true"
+              class="material-symbols-outlined text-[#46a3ff] text-[22px] mt-0.5"
+              style="color: #167ba9"
+              >check_circle</span
+            >
+            <div>
+              <h4 class="font-label-md text-label-md text-on-surface font-bold">
+                Ubytování 7 dní
+              </h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                Ubytování na pokojích v chalupě pronajaté pouze pro náš tábor.
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span
+              aria-hidden="true"
+              class="material-symbols-outlined text-[#46a3ff] text-[22px] mt-0.5"
+              style="color: #896708"
+              >check_circle</span
+            >
+            <div>
+              <h4 class="font-label-md text-label-md text-on-surface font-bold">
+                Plná penze &amp; pití
+              </h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                5 jídel denně a pitný režim
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span
+              aria-hidden="true"
+              class="material-symbols-outlined text-[#46a3ff] text-[22px] mt-0.5"
+              style="color: #167ba9"
+              >check_circle</span
+            >
+            <div>
+              <h4 class="font-label-md text-label-md text-on-surface font-bold">
+                Celotáborový program
+              </h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                Hry po oddílech, dopolední dílny, spolehliví vedoucí
+              </p>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <span
+              aria-hidden="true"
+              class="material-symbols-outlined text-[#46a3ff] text-[22px] mt-0.5"
+              style="color: #bf1e68"
+              >check_circle</span
+            >
+            <div>
+              <h4 class="font-label-md text-label-md text-on-surface font-bold">
+                Pojištění &amp; odborný dohled
+              </h4>
+              <p class="font-body-sm text-body-sm text-on-surface-variant">
+                Úrazové pojištění dětí a zdravotní péče.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-space-xl">
+        <div class="text-center max-w-3xl mx-auto mb-space-xl">
+          <span
+            class="inline-flex items-center gap-2 px-space-md py-1 rounded-full bg-[#eef6ff] text-[#0061a6] text-label-sm font-label-sm font-bold uppercase tracking-wider border border-[#64aeff]/30"
+            style="
+              background-color: rgb(255, 255, 255);
+              border-color: rgb(34, 139, 191);
+              color: #167ba9;
+            "
+            ><span
+              aria-hidden="true"
+              class="material-symbols-outlined text-[16px]"
+              >schedule</span
+            >Koncept a program</span
+          >
+          <h3 class="font-headline-lg text-headline-lg text-on-surface mt-2">
+            Jak vypadá den na našem táboře?
+          </h3>
+          <p class="font-body-md text-body-md text-on-surface-variant mt-2">
+            Každý den vyvažujeme svobodnou volbu tvořivých zájmů s napínavou
+            týmovou dobrodružnou hrou a večerní táborovou pohodou.
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg items-stretch">
+          <div
+            class="flex flex-col bg-surface-container-lowest rounded-lg p-space-lg shadow-sm border border-surface-container hover:shadow-md transition-all duration-300"
+            style="border-color: rgb(240, 194, 67)"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-[#fdd34c]/30 flex items-center justify-center text-[#735c00] mb-space-sm"
+              style="
+                background-color: rgb(255, 255, 255);
+                border: 2px solid rgb(240, 194, 67);
+                color: #896708;
+              "
+            >
+              <span
+                aria-hidden="true"
+                class="material-symbols-outlined text-[28px]"
+                >palette</span
+              >
+            </div>
+            <div
+              class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#ffe087]/50 text-[#574500] font-label-sm text-label-sm font-bold w-fit mb-2"
+              style="
+                background-color: rgb(255, 255, 255);
+                border: 1px solid rgb(240, 194, 67);
+                color: #896708;
+              "
+            >
+              •<span class="" style="letter-spacing: 0.04em">Dopoledne</span>
+            </div>
+            <h4
+              class="font-headline-sm text-headline-sm text-on-surface font-bold mb-2"
+            >
+              Dílny &amp; workshopy
+            </h4>
+            <p
+              class="font-body-sm text-body-sm text-on-surface-variant mb-space-md"
+            >
+              Děti si každé ráno vyberou aktivitu, která je nejvíce láká.
+              Klademe důraz na rozvoj kompetencí dětí.
+            </p>
+            <div
+              class="flex flex-wrap gap-1.5 mt-auto pt-space-sm border-t border-surface-container"
+            >
+              <span
+                class="px-2.5 py-1 rounded-full font-label-sm text-label-sm"
+                style="
+                  background-color: rgb(255, 255, 255);
+                  border: 1px solid rgb(240, 194, 67);
+                  color: #896708;
+                "
+                >Výtvarná dílna</span
+              ><span
+                class="px-2.5 py-1 rounded-full font-label-sm text-label-sm"
+                style="
+                  background-color: rgb(255, 255, 255);
+                  border: 1px solid rgb(240, 194, 67);
+                  color: #896708;
+                "
+                >Sportovní hry</span
+              ><span
+                class="px-2.5 py-1 rounded-full font-label-sm text-label-sm"
+                style="
+                  background-color: rgb(255, 255, 255);
+                  border: 1px solid rgb(240, 194, 67);
+                  color: #896708;
+                "
+                >Tanec &amp; pohyb</span
+              ><span
+                class="px-2.5 py-1 rounded-full font-label-sm text-label-sm"
+                style="
+                  background-color: rgb(255, 255, 255);
+                  border: 1px solid rgb(240, 194, 67);
+                  color: #896708;
+                "
+                >Zálesáctví</span
+              ><span
+                class="px-2.5 py-1 rounded-full font-label-sm text-label-sm"
+                style="
+                  background-color: rgb(255, 255, 255);
+                  border: 1px solid rgb(240, 194, 67);
+                  color: #896708;
+                "
+                >a další</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-col bg-surface-container-lowest rounded-lg p-space-lg shadow-sm border border-[#64aeff]/40 hover:shadow-md transition-all duration-300 relative"
+            style="border-color: rgb(34, 139, 191)"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-[#64aeff]/30 flex items-center justify-center text-[#0061a6] mb-space-sm"
+              style="
+                background-color: rgb(255, 255, 255);
+                border: 2px solid rgb(34, 139, 191);
+                color: #167ba9;
+              "
+            >
+              <span
+                aria-hidden="true"
+                class="material-symbols-outlined text-[28px]"
+                >explore</span
+              >
+            </div>
+            <div
+              class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#e5eeff] text-[#0061a6] font-label-sm text-label-sm font-bold w-fit mb-2"
+              style="
+                background-color: rgb(255, 255, 255);
+                border: 1px solid rgb(34, 139, 191);
+                color: #167ba9;
+              "
+            >
+              •<span class="">Odpoledne</span>
+            </div>
+            <h4
+              class="font-headline-sm text-headline-sm text-on-surface font-bold mb-2"
+            >
+              Celotáborové hry
+            </h4>
+            <p
+              class="font-body-sm text-body-sm text-on-surface-variant mb-space-md"
+            >
+              Tematické etapové hry v lesích po smíšených oddílech. Rozvoj
+              týmové spolupráce, šifry, orientace s mapou a plnění výzev.
+            </p>
+            <div
+              class="flex flex-wrap gap-1.5 mt-auto pt-space-sm border-t border-surface-container"
+            >
+              <span
+                class="px-2.5 py-1 rounded-full font-label-sm text-label-sm"
+                style="
+                  background-color: rgb(255, 255, 255);
+                  border: 1px solid rgb(34, 139, 191);
+                  color: #167ba9;
+                "
+                >Týmová spolupráce</span
+              ><span
+                class="px-2.5 py-1 rounded-full font-label-sm text-label-sm"
+                style="
+                  background-color: rgb(255, 255, 255);
+                  border: 1px solid rgb(34, 139, 191);
+                  color: #167ba9;
+                "
+                >Šifrovací hry</span
+              ><span
+                class="px-2.5 py-1 rounded-full font-label-sm text-label-sm"
+                style="
+                  background-color: rgb(255, 255, 255);
+                  border: 1px solid rgb(34, 139, 191);
+                  color: #167ba9;
+                "
+                >Pobyt v lese</span
+              ><span
+                class="px-2.5 py-1 rounded-full font-label-sm text-label-sm"
+                style="
+                  background-color: rgb(255, 255, 255);
+                  border: 1px solid rgb(34, 139, 191);
+                  color: #167ba9;
+                "
+                >Orientace</span
+              >
+            </div>
+          </div>
+          <div
+            class="flex flex-col bg-surface-container-lowest rounded-lg p-space-lg shadow-sm border border-[#64aeff]/40 hover:shadow-md transition-all duration-300"
+            style="border-color: rgb(227, 57, 136)"
+          >
+            <div
+              class="w-12 h-12 rounded-full bg-[#64aeff]/30 flex items-center justify-center text-[#0061a6] mb-space-sm"
+              style="
+                background-color: rgb(255, 255, 255);
+                border: 2px solid rgb(227, 57, 136);
+                color: #bf1e68;
+              "
+            >
+              <span
+                aria-hidden="true"
+                class="material-symbols-outlined text-[28px]"
+                >local_fire_department</span
+              >
+            </div>
+            <div
+              class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-[#e5eeff] text-[#0061a6] font-label-sm text-label-sm font-bold w-fit mb-2"
+              style="
+                background-color: rgb(255, 255, 255);
+                border: 1px solid rgb(227, 57, 136);
+                color: #bf1e68;
+              "
+            >
+              •<span class="">Večer</span>
+            </div>
+            <h4
+              class="font-headline-sm text-headline-sm text-on-surface font-bold mb-2"
+            >
+              Večerní program
+            </h4>
+            <p
+              class="font-body-sm text-body-sm text-on-surface-variant mb-space-md"
+            >
+              Zpívání u ohně, noční hry či přehlídka talentů. Společné chvíle,
+              na které vzpomínáme nejčastěji. 
+            </p>
+            <div
+              class="flex flex-wrap gap-1.5 mt-auto pt-space-sm border-t border-surface-container"
+            >
+              <span
+                class="px-2.5 py-1 rounded-full font-label-sm text-label-sm"
+                style="
+                  background-color: rgb(255, 255, 255);
+                  border: 1px solid rgb(227, 57, 136);
+                  color: #bf1e68;
+                "
+                >Táborák s kytarou</span
+              ><span
+                class="px-2.5 py-1 rounded-full font-label-sm text-label-sm"
+                style="
+                  background-color: rgb(255, 255, 255);
+                  border: 1px solid rgb(227, 57, 136);
+                  color: #bf1e68;
+                "
+                >Noční hra</span
+              ><span
+                class="px-2.5 py-1 rounded-full font-label-sm text-label-sm"
+                style="
+                  background-color: rgb(255, 255, 255);
+                  border: 1px solid rgb(227, 57, 136);
+                  color: #bf1e68;
+                "
+                >Táborová diskotéka</span
+              ><span
+                class="px-2.5 py-1 rounded-full font-label-sm text-label-sm"
+                style="
+                  background-color: rgb(255, 255, 255);
+                  border: 1px solid rgb(227, 57, 136);
+                  color: #bf1e68;
+                "
+                >Talent show</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="w-full bg-surface-container-low py-space-2xl">
+      <div
+        class="max-w-4xl mx-auto px-margin-mobile md:px-margin-tablet lg:px-margin"
+      >
+        <div class="text-center mb-space-xl">
+          <span
+            class="font-label-sm text-label-sm text-[#0061a6] font-bold uppercase tracking-widest"
+            style="color: #167ba9"
+            >Máte otázky?</span
+          >
+          <h2 class="font-headline-lg text-headline-lg text-on-surface mt-1">
+            Dotazy rodičů
+          </h2>
+        </div>
+        <div class="flex flex-col gap-space-sm" id="faq-accordion">
+          <details class="faq-item">
+            <summary>Co sbalit dítěti do batohu a kufru?</summary>
+            <p>
+              Podrobnosti připravujeme. Aktuální informace si prosím vyžádejte u
+              vedoucích na spolekhlavonozec@gmail.com.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Jak fungují mobilní telefony a elektronika?</summary>
+            <p>
+              Podrobnosti připravujeme. Aktuální informace si prosím vyžádejte u
+              vedoucích na spolekhlavonozec@gmail.com.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Jak to bude s dopravou a odjezdem?</summary>
+            <p>
+              Podrobnosti připravujeme. Aktuální informace si prosím vyžádejte u
+              vedoucích na spolekhlavonozec@gmail.com.
+            </p>
+          </details>
+          <details class="faq-item">
+            <summary>Jaké jsou storno podmínky při nemoci?</summary>
+            <p>
+              Podrobnosti připravujeme. Aktuální informace si prosím vyžádejte u
+              vedoucích na spolekhlavonozec@gmail.com.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>

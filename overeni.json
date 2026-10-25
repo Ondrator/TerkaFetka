@@ -1,0 +1,46 @@
+{
+  "results": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1,
+      "external": [],
+      "duplicateIds": []
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1,
+      "external": [],
+      "duplicateIds": []
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1,
+      "external": [],
+      "duplicateIds": []
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1,
+      "external": [],
+      "duplicateIds": []
+    },
+    {
+      "width": 320,
+      "overflow": false,
+      "broken": 0,
+      "h1": 1,
+      "external": [],
+      "duplicateIds": []
+    }
+  ],
+  "errors": [],
+  "interactions": "passed: desktop anchors and active navigation, mobile navigation and Escape, accordion, required/email validation, camp inquiry, draft, download, privacy, old-link redirect"
+}
