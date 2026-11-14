@@ -11,9 +11,8 @@ Hotový jednostránkový statický web sestavený z pěti Google Stitch exportů
 - Zpětné přesměrování původních názvů stránek na sekce jednoho webu.
 
 ## Co musí dodat provozovatel
-- Portréty a finální medailonky vedoucích; fotografie základny. Odkaz na původní vzdálený obrázek vracel chybu 403, proto je použit dodaný maskot.
-- Konkrétní odkaz na neveřejné fotoalbum. Tlačítko nyní připraví žádost e-mailem.
-- Cena, potvrzený termín, podmínky účasti/storna, doprava, balicí seznam, přihláška a informace o zpracování údajů účastníků. Rok 2027 a termín 12.–18. 7. byly převzaty z obsahu exportu, nikoli z názvu složky 2025.
+- Cena tábora, odkaz na závaznou přihlášku, podrobnosti k odjezdu, seznam věcí a informace o zpracování údajů účastníků.
+- Jména a loga potvrzených sponzorů pro sekci Podporují nás.
 - Přesné odkazy na sociální sítě; v návrhu byly pouze obecné domovské adresy služeb, proto jsou názvy sítí uvedeny jako text.
 - Kontaktní formulář je napojen na uživatelem dodaný endpoint https://formspree.io/f/mvkkzjkn. Zobrazuje stav odesílání, potvrzení po úspěšné odpovědi služby a chyby při odmítnutí či síťovém problému. Nastavení příjemce a případná omezení spravuje provozovatel ve Formspree. Registrace místa ani platby nejsou implementovány a web je nepředstírá.
 

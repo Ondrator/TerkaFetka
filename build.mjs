@@ -25,6 +25,7 @@ const anchors = {
   tabor: "tabor",
   galerie: "galerie",
   kontakt: "kontakt",
+  "podporuji-nas": "podporuji-nas",
   prihlaska: "prihlaska",
   soukromi: "soukromi",
 };
@@ -47,7 +48,15 @@ const [header, footer] = await Promise.all([
   read("src/components/footer.html"),
 ]);
 const sections = [];
-for (const id of ["index", "tabor", "prihlaska", "tym", "galerie", "kontakt"]) {
+for (const id of [
+  "index",
+  "tabor",
+  "prihlaska",
+  "tym",
+  "galerie",
+  "podporuji-nas",
+  "kontakt",
+]) {
   let content = await read("src/pages/" + id + ".html");
   if (id === "index")
     content = content
@@ -66,7 +75,7 @@ const html = `<!doctype html>\n<html lang="cs"><head><meta charset="utf-8"><meta
 await writeFile(path.join(root, "index.html"), html);
 // Preserve any earlier direct links while keeping the visitor on one page.
 for (const [id, anchor] of Object.entries(anchors)) {
-  if (id === "index") continue;
+  if (id === "index" || id === "podporuji-nas") continue;
   await writeFile(
     path.join(root, id + ".html"),
     `<!doctype html><html lang="cs"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="0;url=index.html#${anchor}"><title>Hlavonožec</title><a href="index.html#${anchor}">Pokračovat na web Hlavonožec</a></html>`,
