@@ -968,9 +968,16 @@ body[data-page="kontakt"] .form-feedback {
   .team-contact > div:last-child {
     width: 100%;
   }
+  .team-contact {
+    padding-inline: clamp(1rem, 5vw, 2.5rem);
+  }
   .team-contact a {
     width: 100%;
     font-size: 13px;
+  }
+  .team-contact .team-contact-email {
+    padding-inline: 0.625rem;
+    white-space: nowrap;
   }
 }
 /* Jednostránková struktura: nabídka se posouvá ke skutečným sekcím. */
