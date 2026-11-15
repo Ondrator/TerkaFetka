@@ -1147,8 +1147,8 @@ body,
 }
 .team-study {
   position: absolute;
-  top: 0.75rem;
   right: 0.75rem;
+  bottom: 0.75rem;
   max-width: calc(100% - 1.5rem);
   padding: 0.4rem 0.7rem;
   border-radius: 12px;
