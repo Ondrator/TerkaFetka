@@ -1135,6 +1135,24 @@ body,
   border-radius: 24px;
   background: white;
 }
+.team-portrait {
+  position: relative;
+}
+.team-study {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  max-width: min(18rem, 72%);
+  padding: 0.4rem 0.7rem;
+  border-radius: 12px;
+  background: #fff;
+  color: var(--ink);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-align: right;
+  box-shadow: 0 1px 6px #111c2d30;
+}
 .team-photo {
   width: 100%;
   height: auto;
@@ -1160,7 +1178,10 @@ body,
 }
 .team-experience {
   list-style: disc;
-  padding-left: 1.25rem;
+  padding: 0.85rem 1rem 0.85rem 2rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--wash);
 }
 .team-experience li + li,
 .faq-list li + li {
