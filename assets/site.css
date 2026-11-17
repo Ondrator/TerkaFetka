@@ -119,16 +119,6 @@ textarea {
   height: 54px;
   object-fit: contain;
 }
-.brand-sub {
-  display: block;
-  font-family: "Nunito Sans", sans-serif;
-  font-size: 11px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-top: 5px;
-  font-weight: 600;
-}
 .main-nav {
   display: flex;
   background: var(--wash);
@@ -551,9 +541,6 @@ body[data-page="tym"] .group:hover {
   .brand {
     font-size: 19px;
   }
-  .brand-sub {
-    font-size: 9px;
-  }
   .main-nav a {
     padding: 10px;
   }
@@ -770,9 +757,6 @@ body[data-page="tym"] .group:hover {
   .brand {
     font-size: 18px;
     gap: 8px;
-  }
-  .brand-sub {
-    display: none;
   }
   .header-inner {
     gap: 8px;
@@ -1120,7 +1104,6 @@ html {
 }
 /* Typography and content for the camp, team and sponsors. */
 body,
-.brand-sub,
 .form-note,
 [class*="font-body-"] {
   font-family: system-ui, "Segoe UI", sans-serif;
@@ -1128,7 +1111,7 @@ body,
 .site-main h1,
 .site-main h2,
 .home-camp h2 {
-  font-family: Georgia, "Times New Roman", serif;
+  font-family: "Plus Jakarta Sans", sans-serif;
   letter-spacing: -0.025em;
 }
 .team-grid {
